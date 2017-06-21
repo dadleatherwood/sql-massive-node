@@ -1,7 +1,3 @@
-CREATE TABLE IF NOT EXISTS product(
-  id serial primary key,
-  name varchar(255),
-  description varchar(255),
-  price integer,
-  imageurl varchar(255)
-);
+INSERT INTO Product (name, description, price, imageurl) VALUES($1, $2, $3, $4)
+RETURNING *
+;
